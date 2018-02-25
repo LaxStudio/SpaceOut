@@ -141,7 +141,7 @@ Tilemap:
   m_GameObject: {fileID: 1246583990390862}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 0, y: 0, z: 0}
+  - first: {x: -1, y: 0, z: 0}
     second:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
@@ -155,12 +155,12 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 1c9b341e215b11a4e87cfe5a6b4148fb, type: 2}
+    m_Data: {fileID: 11400000, guid: 5cea640b6e2632c40a3648eda11c0623, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 293d4b0e42a6e8a489c35226a2869c72, type: 3}
+    m_Data: {fileID: 21300000, guid: cf9bf0a66426de44497a6046771bab63, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1
     m_Data:
@@ -182,7 +182,7 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 2.2e-44, g: 0, b: 0, a: NaN}
+    m_Data: {r: 2.2e-44, g: 0, b: 21.722155, a: 1e-45}
   - m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
@@ -212,4 +212,4 @@ Tilemap:
   - serializedVersion: 1
     m_DirtyIndex: 1
   - serializedVersion: 1
-    m_DirtyIndex: 89
+    m_DirtyIndex: 1
