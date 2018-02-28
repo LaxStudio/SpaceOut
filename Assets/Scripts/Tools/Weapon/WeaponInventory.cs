@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using UnityEngine.Tilemaps;
 
 [CreateAssetMenu]
 public class WeaponInventory : ScriptableObject
@@ -10,9 +12,15 @@ public class WeaponInventory : ScriptableObject
     public Weapon ActiveWeapon;
 
     public List<Weapon> OwnedWeapons = new List<Weapon>();
-    
+
     public void NextWeapon()
     {
+        if (!OwnedWeapons.Any())
+        {
+            ActiveWeapon = null;
+            return;
+        }
+            
         var currentIndex = OwnedWeapons.IndexOf(ActiveWeapon);
         var nextIndex = currentIndex + 1;
 
@@ -24,6 +32,12 @@ public class WeaponInventory : ScriptableObject
 
     public void PrevoiusWeapon()
     {
+        if (!OwnedWeapons.Any())
+        {
+            ActiveWeapon = null;
+            return;
+        }
+            
         var currentIndex = OwnedWeapons.IndexOf(ActiveWeapon);
         var previousIndex = currentIndex - 1;
 
@@ -33,14 +47,28 @@ public class WeaponInventory : ScriptableObject
         ActiveWeapon = OwnedWeapons[previousIndex];
     }
 
-    public bool AddWeapon(Weapon weapon)
+    public Weapon AddWeapon(Weapon weapon)
     {
-        if(MaxNumberOfWeapons <= OwnedWeapons.Count)
+        if (MaxNumberOfWeapons <= OwnedWeapons.Count)
         {
             OwnedWeapons.Add(weapon);
-            return true;
+            ActiveWeapon = weapon;
         }
 
-        return false;
+        return weapon;
+    }
+
+    public Weapon DropWeapon()
+    {
+
+        var activeWeapon = ActiveWeapon;
+        if (OwnedWeapons.Count > 0 && ActiveWeapon != null)
+        {
+            OwnedWeapons.Remove(activeWeapon);
+            NextWeapon();
+        }
+
+        Debug.Log(activeWeapon.ToString());
+        return activeWeapon;
     }
 }

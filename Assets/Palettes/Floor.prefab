@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4654644186598112}
   - component: {fileID: 2569400265445552724}
   m_Layer: 31
-  m_Name: Derp
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,7 +160,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: cf9bf0a66426de44497a6046771bab63, type: 3}
+    m_Data: {fileID: 21300000, guid: fb3b799d520415949b7634f8adb8e48a, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1
     m_Data:
@@ -210,6 +210,6 @@ Tilemap:
     e33: 1
   m_TileRefreshArray:
   - serializedVersion: 1
-    m_DirtyIndex: 1
+    m_DirtyIndex: 20
   - serializedVersion: 1
-    m_DirtyIndex: 1
+    m_DirtyIndex: 0
