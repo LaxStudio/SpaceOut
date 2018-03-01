@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Data for a weapon
+/// </summary>
 [CreateAssetMenu]
 public class Weapon : ScriptableObject
 {
