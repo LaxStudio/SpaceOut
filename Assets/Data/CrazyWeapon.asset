@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a91eb74742f2e449327d8062294327, type: 3}
   m_Name: CrazyWeapon
   m_EditorClassIdentifier: 
-  Avatar: {fileID: 21300000, guid: 6ec706981a919c3489f0b061a40054e2, type: 3}
+  Avatar: {fileID: 21300000, guid: be80fb082eaeeb542b5d741f5386d9e1, type: 3}
   FireRate:
     UseConstant: 1
     ConstantValue: 1.5
