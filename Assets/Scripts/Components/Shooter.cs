@@ -23,7 +23,8 @@ public class Shooter : MonoBehaviour {
     {
         if (Input.GetKey(ShootKeyBinding) && _canShoot)
         {
-            StartCoroutine(ShootWeapon(_weaponHolster.WeaponInventory.ActiveWeapon.FireRate));
+            if(_weaponHolster.WeaponInventory.ActiveWeapon != null)
+                StartCoroutine(ShootWeapon(_weaponHolster.WeaponInventory.ActiveWeapon.FireRate));
         }
     }
 
