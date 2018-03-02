@@ -2289,6 +2289,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4136181991059032, guid: ad75f17145f58464297b96fad1806b2c, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad75f17145f58464297b96fad1806b2c, type: 2}
   m_IsPrefabParent: 0
@@ -2344,3 +2348,20 @@ Transform:
   m_PrefabParentObject: {fileID: 4085058850979004, guid: 3f0b66ebbd26fec4da94d2a259622c0f,
     type: 2}
   m_PrefabInternal: {fileID: 452859138}
+--- !u!1 &1858653018 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1503850134295992, guid: dc0b9948172f8eb4cac9f37f825cf857,
+    type: 2}
+  m_PrefabInternal: {fileID: 1711766793}
+--- !u!114 &1858653027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1858653018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ea1a0ee49edf04699d0282e8b3cd7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShootKeyBinding: 323
