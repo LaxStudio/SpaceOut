@@ -29,7 +29,7 @@ public class WeaponInventory : ScriptableObject
     //
     public void NextWeapon()
     {
-        if (!OwnedWeapons.Any())
+        if (!OwnedWeapons.Any() || OwnedWeapons == null)
         {
             ActiveWeapon = null;
             return;
