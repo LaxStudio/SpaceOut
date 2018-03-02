@@ -22,6 +22,8 @@ public class WeaponHolster : MonoBehaviour {
     //
     public KeyCode DropWeaponKey;
 
+    public KeyCode ReloadWeaponKey;
+
     private void Start()
     {
         //
@@ -36,12 +38,17 @@ public class WeaponHolster : MonoBehaviour {
         {
             DropWeapon();
         }
+
+        if (Input.GetKeyDown(ReloadWeaponKey))
+        {
+            ReloadActiveWeapon();
+        }
     }
 
     //
     // Add to inventory
     //
-    public void AddWeapon(Weapon weapon)
+    public void AddWeapon(WeaponVariable weapon)
     {
         WeaponInventory.AddWeapon(weapon);
     }
@@ -59,6 +66,14 @@ public class WeaponHolster : MonoBehaviour {
             Instantiate(WeaponPrefab, this.transform.position, Quaternion.identity);
         }
 
+    }
+
+    //
+    // Reload weapon
+    //
+    public void ReloadActiveWeapon()
+    {
+        WeaponInventory.ReloadActiveWeapon();
     }
 
 }

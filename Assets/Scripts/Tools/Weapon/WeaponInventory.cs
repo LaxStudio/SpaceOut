@@ -10,9 +10,9 @@ public class WeaponInventory : ScriptableObject
 {
     public int MaxNumberOfWeapons;
 
-    public Weapon ActiveWeapon;
+    public WeaponVariable ActiveWeapon;
 
-    public List<Weapon> OwnedWeapons = new List<Weapon>();
+    public List<WeaponVariable> OwnedWeapons = new List<WeaponVariable>();
 
     //
     // For resetting the scriptable object
@@ -21,7 +21,7 @@ public class WeaponInventory : ScriptableObject
     {
         MaxNumberOfWeapons = 5;
         ActiveWeapon = null;
-        OwnedWeapons = new List<Weapon>();
+        OwnedWeapons = new List<WeaponVariable>();
     }
 
     //
@@ -67,7 +67,7 @@ public class WeaponInventory : ScriptableObject
     //
     // Add weapon to inventory
     //
-    public Weapon AddWeapon(Weapon weapon)
+    public WeaponVariable AddWeapon(WeaponVariable weapon)
     {
         if (MaxNumberOfWeapons > OwnedWeapons.Count)
         {
@@ -81,7 +81,7 @@ public class WeaponInventory : ScriptableObject
     //
     // Remove weapon from inventory
     //
-    public Weapon DropWeapon()
+    public WeaponVariable DropWeapon()
     {
         var activeWeapon = ActiveWeapon;
         if (OwnedWeapons.Count > 0 && ActiveWeapon != null)
@@ -91,5 +91,15 @@ public class WeaponInventory : ScriptableObject
         }
 
         return activeWeapon;
+    }
+
+    public void ReloadActiveWeapon()
+    {
+        if (ActiveWeapon == null)
+            return;
+
+        if (!ActiveWeapon.CurrentMagAmount.Equals(ActiveWeapon.DefaultMagAmount))
+            ActiveWeapon.CurrentMagAmount = ActiveWeapon.DefaultMagAmount;
+
     }
 }

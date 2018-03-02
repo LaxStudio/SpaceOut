@@ -5,11 +5,14 @@
 /// </summary>
 public class WeaponSetter : MonoBehaviour {
 
-    public Weapon Weapon;
+    public WeaponVariable Weapon;
 
     private SpriteRenderer _spriteRenderer;
 
 	void Start () {
+
+        Weapon.Reset();
+
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
         if (_spriteRenderer != null)

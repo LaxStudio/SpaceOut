@@ -11,7 +11,7 @@ public class WeaponLootChecker : MonoBehaviour
 
     public KeyCode PickUpKey;
 
-    private Weapon _weapon;
+    private WeaponVariable _weapon;
     private WeaponHolster _activeHolster;
     private SpriteRenderer _spriteRenderer;
 
