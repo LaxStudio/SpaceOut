@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Resources;
 using UnityEngine;
 
 /// <summary>
@@ -8,40 +9,57 @@ using UnityEngine;
 public class WeaponLootChecker : MonoBehaviour
 {
 
+    public KeyCode PickUpKey;
+
     private Weapon _weapon;
-    private bool _lootable;
+    private WeaponHolster _activeHolster;
+    private SpriteRenderer _spriteRenderer;
 
     private void Start()
     {
         var weaponData = GetComponent<WeaponSetter>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
 
-        if(weaponData != null && weaponData.Weapon != null)
+        if (weaponData != null && weaponData.Weapon != null)
             _weapon = weaponData.Weapon;
 
-        _lootable = false;
-        StartCoroutine(SetLootable(1.0f));
+        _activeHolster = null;
     }
 
-    private IEnumerator SetLootable(float waitTime)
+    private void Update()
     {
-        while (true)
+        if (Input.GetKeyDown(PickUpKey) && _activeHolster != null)
         {
-            yield return new WaitForSeconds(waitTime);
-            _lootable = true;
+            _activeHolster.AddWeapon(_weapon);
+            Destroy(this.gameObject);
         }
     }
 
 	void OnTriggerEnter2D(Collider2D collider)
     {
-        if (_weapon != null && _lootable)
+        if (_weapon != null)
         {
-            var playerHolster = collider.GetComponent<WeaponHolster>();
+            var possibleHolster = collider.GetComponent<WeaponHolster>();
 
-            if (playerHolster != null)
+            if (possibleHolster != null)
             {
-                playerHolster.AddWeapon(_weapon);
-                Destroy(this.gameObject);
+                _activeHolster = possibleHolster;
+
+                // add indicator to be picked up
+                _spriteRenderer.color = Color.gray;
             }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        var possibleHolster = collider.GetComponent<WeaponHolster>();
+        if (possibleHolster != null && possibleHolster == _activeHolster)
+        {
+            _activeHolster = null;
+
+            // remove indicator to be picked up
+            _spriteRenderer.color = Color.white;
         }
     }
 

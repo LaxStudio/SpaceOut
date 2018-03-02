@@ -1671,6 +1671,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114932304920395584, guid: f3dc389de83c22141ac38924f642f27c,
+        type: 2}
+      propertyPath: m_Lens.OrthographicSize
+      value: 8.4375
+      objectReference: {fileID: 0}
+    - target: {fileID: 20669060907494074, guid: f3dc389de83c22141ac38924f642f27c,
+        type: 2}
+      propertyPath: orthographic size
+      value: 8.4375
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3dc389de83c22141ac38924f642f27c, type: 2}
   m_IsPrefabParent: 0
@@ -1931,7 +1941,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1082834858}
   m_BodyType: 2
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -1995,6 +2005,24 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1878181884622710, guid: ad75f17145f58464297b96fad1806b2c, type: 2}
+      propertyPath: m_TagString
+      value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878181884622710, guid: ad75f17145f58464297b96fad1806b2c, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 61941598691453806, guid: ad75f17145f58464297b96fad1806b2c,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50585981600654990, guid: ad75f17145f58464297b96fad1806b2c,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad75f17145f58464297b96fad1806b2c, type: 2}
   m_IsPrefabParent: 0
@@ -2036,6 +2064,10 @@ Prefab:
     - target: {fileID: 4088801708677740, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503850134295992, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
