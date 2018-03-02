@@ -21,3 +21,4 @@ MonoBehaviour:
     ConstantValue: 10
     Variable: {fileID: 0}
   TwoHanded: 1
+  Projectile: {fileID: 4496328752278344, guid: 443a8c590301f984ab1dc35cc8cdd116, type: 2}

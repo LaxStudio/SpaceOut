@@ -19,4 +19,7 @@ public class Weapon : ScriptableObject
 
     [Tooltip("Causes players sprite to change to a different stance.")]
     public bool TwoHanded;
+
+    [Tooltip("The projectile prefab.")]
+    public Transform Projectile; // TODO change this to a scriptable object
 }

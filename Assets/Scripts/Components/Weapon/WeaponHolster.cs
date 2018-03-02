@@ -52,9 +52,12 @@ public class WeaponHolster : MonoBehaviour {
     private void DropWeapon()
     {
         var droppedWeapon = WeaponInventory.DropWeapon();
-        WeaponPrefab.GetComponent<WeaponSetter>().Weapon = droppedWeapon;
-        WeaponPrefab.GetComponent<Rigidbody2D>().AddForce(-transform.right * 500);
-        Instantiate(WeaponPrefab, this.transform.position, Quaternion.identity);
+
+        if (droppedWeapon != null)
+        {
+            WeaponPrefab.GetComponent<WeaponSetter>().Weapon = droppedWeapon;
+            Instantiate(WeaponPrefab, this.transform.position, Quaternion.identity);
+        }
 
     }
 
