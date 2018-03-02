@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour {
 
@@ -7,9 +8,18 @@ public class Enemy : MonoBehaviour {
     private Transform target;
     private int wavepointIndex = 0;
 
+    [HideInInspector]
+
+    public float startHp = 100;
+    private float hp;
+
+    [Header("Unity Stuff")]
+    public Image hpBar;
+
     private void Start()
     {
         target = Waypoints.points[0];
+        hp = startHp;
     }
 
     private void Update()
@@ -35,5 +45,12 @@ public class Enemy : MonoBehaviour {
         wavepointIndex++;
         target = Waypoints.points[wavepointIndex];
     }
+
+    public void TakeDmg (float amount)
+    {
+        hp -= amount;
+        hpBar.fillAmount = hp / startHp;
+    }
+
 
 }
