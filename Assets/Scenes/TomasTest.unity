@@ -2023,6 +2023,10 @@ Prefab:
       propertyPath: m_BodyType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4136181991059032, guid: ad75f17145f58464297b96fad1806b2c, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad75f17145f58464297b96fad1806b2c, type: 2}
   m_IsPrefabParent: 0
@@ -2069,6 +2073,12 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114030238486964892, guid: dc0b9948172f8eb4cac9f37f825cf857,
+        type: 2}
+      propertyPath: WeaponPrefab
+      value: 
+      objectReference: {fileID: 1425941763299134, guid: ad75f17145f58464297b96fad1806b2c,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
   m_IsPrefabParent: 0
