@@ -98,8 +98,8 @@ public class WeaponInventory : ScriptableObject
         if (ActiveWeapon == null)
             return;
 
-        if (!ActiveWeapon.CurrentMagAmount.Equals(ActiveWeapon.DefaultMagAmount))
-            ActiveWeapon.CurrentMagAmount = ActiveWeapon.DefaultMagAmount;
+        //if (!ActiveWeapon.CurrentMagAmount.Equals(ActiveWeapon.DefaultMagAmount))
+        //    ActiveWeapon.CurrentMagAmount = ActiveWeapon.DefaultMagAmount;
 
     }
 }

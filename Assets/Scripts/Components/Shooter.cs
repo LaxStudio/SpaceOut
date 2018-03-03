@@ -38,11 +38,11 @@ public class Shooter : MonoBehaviour {
             yield break;
         }
 
-        if (weapon.CurrentMagAmount < 1)
-        {
-            Debug.Log("Player need to reload");
-            yield break;
-        }
+        //if (weapon.CurrentMagAmount < 1)
+        //{
+        //    Debug.Log("Player need to reload");
+        //    yield break;
+        //}
 
         var projectile = weapon.Projectile;
         var mouseInWorldCoordinates = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
@@ -50,7 +50,7 @@ public class Shooter : MonoBehaviour {
         var projectileTraveler = Instantiate(projectile, transform.position, transform.rotation).GetComponent<Traveler>();
         projectileTraveler.SetDirectionWithTarget(mouseInWorldCoordinates);
 
-        weapon.CurrentMagAmount -= 1;
+        //weapon.CurrentMagAmount -= 1;
         _canShoot = false;
 
         yield return new WaitForSeconds(fireRate);

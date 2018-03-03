@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Enemy: MonoBehaviour
+public class EnemyAdder : MonoBehaviour
 {
     public EnemySet RuntimeSet;
 
