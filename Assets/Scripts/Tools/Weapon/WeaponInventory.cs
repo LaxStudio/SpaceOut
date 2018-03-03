@@ -1,21 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using UnityEngine.Tilemaps;
 
+/// <summary>
+/// Data for players inventory
+/// </summary>
 [CreateAssetMenu]
 public class WeaponInventory : ScriptableObject
 {
     public int MaxNumberOfWeapons;
 
-    public Weapon ActiveWeapon;
+    public WeaponVariable ActiveWeapon;
 
-    public List<Weapon> OwnedWeapons = new List<Weapon>();
+    public List<WeaponVariable> OwnedWeapons = new List<WeaponVariable>();
 
+    //
+    // For resetting the scriptable object
+    //
+    public void Reset()
+    {
+        MaxNumberOfWeapons = 5;
+        ActiveWeapon = null;
+        OwnedWeapons = new List<WeaponVariable>();
+    }
+
+    //
+    // Select next weapon as active weapon
+    //
     public void NextWeapon()
     {
-        if (!OwnedWeapons.Any())
+        if (!OwnedWeapons.Any() || OwnedWeapons == null)
         {
             ActiveWeapon = null;
             return;
@@ -30,6 +44,9 @@ public class WeaponInventory : ScriptableObject
         ActiveWeapon = OwnedWeapons[nextIndex];
     }
 
+    //
+    // Select previous weapon as active weapon
+    //
     public void PrevoiusWeapon()
     {
         if (!OwnedWeapons.Any())
@@ -47,9 +64,12 @@ public class WeaponInventory : ScriptableObject
         ActiveWeapon = OwnedWeapons[previousIndex];
     }
 
-    public Weapon AddWeapon(Weapon weapon)
+    //
+    // Add weapon to inventory
+    //
+    public WeaponVariable AddWeapon(WeaponVariable weapon)
     {
-        if (MaxNumberOfWeapons <= OwnedWeapons.Count)
+        if (MaxNumberOfWeapons > OwnedWeapons.Count)
         {
             OwnedWeapons.Add(weapon);
             ActiveWeapon = weapon;
@@ -58,9 +78,11 @@ public class WeaponInventory : ScriptableObject
         return weapon;
     }
 
-    public Weapon DropWeapon()
+    //
+    // Remove weapon from inventory
+    //
+    public WeaponVariable DropWeapon()
     {
-
         var activeWeapon = ActiveWeapon;
         if (OwnedWeapons.Count > 0 && ActiveWeapon != null)
         {
@@ -68,7 +90,16 @@ public class WeaponInventory : ScriptableObject
             NextWeapon();
         }
 
-        Debug.Log(activeWeapon.ToString());
         return activeWeapon;
+    }
+
+    public void ReloadActiveWeapon()
+    {
+        if (ActiveWeapon == null)
+            return;
+
+        //if (!ActiveWeapon.CurrentMagAmount.Equals(ActiveWeapon.DefaultMagAmount))
+        //    ActiveWeapon.CurrentMagAmount = ActiveWeapon.DefaultMagAmount;
+
     }
 }

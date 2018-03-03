@@ -32,17 +32,18 @@ public class KeyboardMover : MonoBehaviour
     public FloatVariable MoveRate;
     public MoveAxis Horizontal = new MoveAxis(KeyCode.D, KeyCode.A);
     public MoveAxis Vertical = new MoveAxis(KeyCode.W, KeyCode.S);
-    public Rigidbody2D rb2d;
+
+    private Rigidbody2D _rb2d;
 
     private void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        _rb2d = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
     {
         var moveNormal = new Vector3(Horizontal, Vertical).normalized;
         var wantedPosition = transform.position + (moveNormal * Time.fixedDeltaTime * MoveRate.Value);
-        rb2d.MovePosition(wantedPosition);
+        _rb2d.MovePosition(wantedPosition);
     }
 }

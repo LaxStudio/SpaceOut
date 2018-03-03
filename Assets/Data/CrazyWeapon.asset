@@ -11,13 +11,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a91eb74742f2e449327d8062294327, type: 3}
   m_Name: CrazyWeapon
   m_EditorClassIdentifier: 
-  Avatar: {fileID: 21300000, guid: be80fb082eaeeb542b5d741f5386d9e1, type: 3}
+  Avatar: {fileID: 21300000, guid: b707b808919900a4ea94db92cb298fc0, type: 3}
   FireRate:
     UseConstant: 1
-    ConstantValue: 1.5
+    ConstantValue: 0.5
     Variable: {fileID: 0}
   Damage:
     UseConstant: 1
     ConstantValue: 10
     Variable: {fileID: 0}
+  DefaultMagAmount: 100
+  CurrentMagAmount: 96
   TwoHanded: 1
+  Projectile: {fileID: 4496328752278344, guid: 443a8c590301f984ab1dc35cc8cdd116, type: 2}
+  ReloadOneBullet: 0
+  ReloadTime:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}

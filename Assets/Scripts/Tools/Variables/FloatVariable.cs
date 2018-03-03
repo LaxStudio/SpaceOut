@@ -13,16 +13,4 @@ public class FloatVariable : ScriptableObject
 
     [Tooltip("Floats value")]
     public float Value;
-
-    private float _value;
-
-    public void SetValue(float value)
-    {
-        Value = value;
-    }
-
-    public void ApplyChange(float amount)
-    {
-        Value += amount;
-    }
 }
