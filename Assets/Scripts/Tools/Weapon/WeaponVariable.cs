@@ -18,10 +18,10 @@ public class WeaponVariable : ScriptableObject
     public FloatReference Damage;
 
     [Tooltip("Amount of bullets before reload.")]
-    public float DefaultMagAmount;
+    public int MaxMagAmount;
 
-    [Tooltip("Amount of bullets before reload.")]
-    public float CurrentMagAmount; 
+    [Tooltip("Amount of bullets in total.")]
+    public int MaxAmmoAmount;
 
     [Tooltip("Causes players sprite to change to a different stance.")]
     public bool TwoHanded;
@@ -35,11 +35,4 @@ public class WeaponVariable : ScriptableObject
     [Tooltip("Reload one bullet at the time.")]
     public FloatReference ReloadTime; // TODO How long it takes to get full ammo
 
-    //
-    // For resetting the scriptable object
-    //
-    public void Reset()
-    {
-        CurrentMagAmount = DefaultMagAmount;
-    }
 }

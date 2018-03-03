@@ -2,23 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Ammunition on weapon
+/// </summary>
 public class Ammunition : MonoBehaviour
 {
 
-    public int MaxAmmo;
-    public int CurrentAmmo;
+    private int _maxAmmo;
+    private int _currentAmmo;
 
-    public int MaxMag;
-    public int CurrentMag;
+    private int _maxMag;
+    private int _currentMag;
 
     public KeyCode ReloadWeaponKey;
 
     private bool _reloading;
     private float _reloadTime;
 
-    public void Initialize(float reloadTime)
+    public void Initialize(float reloadTime, int maxAmmo, int maxMag)
     {
         _reloadTime = reloadTime;
+        _maxAmmo = maxAmmo;
+        _maxMag = maxMag;
     }
 
     // Use this for initialization
@@ -34,7 +39,6 @@ public class Ammunition : MonoBehaviour
         {
             StartCoroutine(Reloading());
         }
-
     }
 
     /// <summary>
@@ -45,28 +49,38 @@ public class Ammunition : MonoBehaviour
         _reloading = true;
         while (true)
         {
-            var bulletsToReload = MaxMag - CurrentMag;
+            var bulletsToReload = _maxMag - _currentMag;
 
-            if (bulletsToReload == 0 || CurrentAmmo == 0)
+            if (bulletsToReload == 0 || _currentAmmo == 0)
                 yield break;
 
             yield return new WaitForSeconds(_reloadTime);
 
-            if (CurrentAmmo < bulletsToReload)
+            if (_currentAmmo < bulletsToReload)
             {
-                CurrentMag += CurrentAmmo;
-                CurrentAmmo = 0;
+                _currentMag += _currentAmmo;
+                _currentAmmo = 0;
             }
             else
             {
-                CurrentMag += bulletsToReload;
-                CurrentAmmo -= bulletsToReload;
+                _currentMag += bulletsToReload;
+                _currentAmmo -= bulletsToReload;
             }
 
             _reloading = false;
             break;
         }
+    }
 
-
+    /// <summary>
+    /// Add ammo to weapon
+    /// </summary>
+    /// <param name="amountAmmo"></param>
+    public void AddAmmo(int amountAmmo)
+    {
+        if (_currentAmmo + amountAmmo > _maxAmmo)
+            _currentAmmo = _maxAmmo;
+        else
+            _currentAmmo += amountAmmo;
     }
 }

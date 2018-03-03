@@ -14,16 +14,17 @@ public class WeaponSetter : MonoBehaviour {
 
 	void Start () {
 
-        if(Weapon != null)
-            Weapon.Reset();
+	    if (Weapon == null)
+	    {
+            Debug.Log("Weapon not connected to WeaponSetter");
+	        return;
+	    }
 
-
-        
         _spriteRenderer = GetComponent<SpriteRenderer>();
 	    _ammo = GetComponent<Ammunition>();
 
         if (_ammo != null)
-            _ammo.Initialize(Weapon.ReloadTime);
+            _ammo.Initialize(Weapon.ReloadTime, Weapon.MaxAmmoAmount, Weapon.MaxMagAmount);
 
         if (_spriteRenderer != null)
             _spriteRenderer.sprite = Weapon.Avatar;
