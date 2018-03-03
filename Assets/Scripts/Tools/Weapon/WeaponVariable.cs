@@ -33,7 +33,7 @@ public class WeaponVariable : ScriptableObject
     public bool ReloadOneBullet; // TODO fix reload weapon, one bullet at the time or the whole mag on reload
 
     [Tooltip("Reload one bullet at the time.")]
-    public FloatReference ReloadSpeed; // TODO How long it takes to get full ammo
+    public FloatReference ReloadTime; // TODO How long it takes to get full ammo
 
     //
     // For resetting the scriptable object

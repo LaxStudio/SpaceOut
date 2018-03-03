@@ -1683,6 +1683,23 @@ Prefab:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1858653026}
+    - target: {fileID: 4988676718269380, guid: f3dc389de83c22141ac38924f642f27c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988676718269380, guid: f3dc389de83c22141ac38924f642f27c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988676718269380, guid: f3dc389de83c22141ac38924f642f27c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20121742161277558, guid: f3dc389de83c22141ac38924f642f27c,
+        type: 2}
+      propertyPath: orthographic size
+      value: 8.4375
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3dc389de83c22141ac38924f642f27c, type: 2}
   m_IsPrefabParent: 0
@@ -2315,7 +2332,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114205913693325810, guid: dc0b9948172f8eb4cac9f37f825cf857,
+        type: 2}
+      propertyPath: ReloadWeaponKey
+      value: 114
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95372394407206928, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1716544399 stripped

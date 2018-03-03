@@ -22,8 +22,6 @@ public class WeaponHolster : MonoBehaviour {
     //
     public KeyCode DropWeaponKey;
 
-    public KeyCode ReloadWeaponKey;
-
     private void Start()
     {
         //
@@ -37,11 +35,6 @@ public class WeaponHolster : MonoBehaviour {
         if (Input.GetKeyDown(DropWeaponKey))
         {
             DropWeapon();
-        }
-
-        if (Input.GetKeyDown(ReloadWeaponKey))
-        {
-            ReloadActiveWeapon();
         }
     }
 
