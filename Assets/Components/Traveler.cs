@@ -2,8 +2,8 @@
 
 public class Traveler : MonoBehaviour
 {
-    public float speed = 20f;
-    public float travelDistance = 20f;
+    public FloatReference speed;
+    public FloatReference travelDistance;
     private Vector2 dir;
     private Vector3 start;
 
@@ -29,4 +29,10 @@ public class Traveler : MonoBehaviour
     {
         dir = target - transform.position;
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(gameObject);
+    }
+
 }
