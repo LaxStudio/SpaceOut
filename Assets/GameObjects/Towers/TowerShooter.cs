@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TowerShooter : BaseShooter
@@ -12,6 +13,7 @@ public class TowerShooter : BaseShooter
     private GameObject target;
     public FloatReference range;
     private List<GameObject> possibleTargets = new List<GameObject>();
+    public List<StringVariable> targetTags;
      
     override public void OnStart()
     {
@@ -42,9 +44,7 @@ public class TowerShooter : BaseShooter
 
     private Boolean HasTarget()
     {
-        Boolean value = target != null
-            && target.activeSelf
-            && target.GetComponent<Renderer>() != null;
+        Boolean value = target != null && target.GetComponent<Targetable>() != null;
         return value;
     }
 
@@ -67,8 +67,10 @@ public class TowerShooter : BaseShooter
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" &&
-            !possibleTargets.Contains(other.gameObject))
+        Targetable targetable = other.gameObject.GetComponent<Targetable>();
+        if (targetable != null 
+            && targetable.tags.All(item => targetTags.Contains(item)) 
+            && !possibleTargets.Contains(other.gameObject))
         {
             possibleTargets.Add(other.gameObject);
         }
