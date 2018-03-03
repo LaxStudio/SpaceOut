@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7294e2adbd7c4a8429a02b00f91e6d88, type: 3}
-  m_Name: MovingSpeed
+  m_Name: Moverate
   m_EditorClassIdentifier: 
-  DeveloperDescription: Player speed
+  DeveloperDescription: 
   Value: 5
