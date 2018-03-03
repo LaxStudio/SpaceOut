@@ -1,0 +1,463 @@
+fileFormatVersion: 2
+guid: 64b800cd07ab26c46a1e63bc587d8ae5
+timeCreated: 1467920662
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: red_idle_0
+    21300002: red_idle_1
+    21300004: red_idle_2
+    21300006: red_idle_3
+    21300008: red_idle_4
+    21300010: red_idle_5
+    21300012: red_idle_6
+    21300014: red_idle_7
+    21300016: red_idle_8
+    21300018: red_idle_9
+    21300020: red_idle_10
+    21300022: red_idle_11
+    21300024: red_idle_12
+    21300026: red_idle_13
+    21300028: red_idle_14
+    21300030: red_idle_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 300
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: red_idle_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3591
+        width: 359
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 90.5, y: 25.5}
+        - {x: 87.5, y: 50.5}
+        - {x: 73.5, y: 93.5}
+        - {x: 30.5, y: 122.5}
+        - {x: -32.5, y: 122.5}
+        - {x: -62.5, y: 108.5}
+        - {x: -89.5, y: 48.5}
+        - {x: -89.5, y: -38.5}
+        - {x: -81.5, y: -84.5}
+        - {x: -48.5, y: -108.5}
+        - {x: -18.5, y: -121.5}
+        - {x: 5.5, y: -121.5}
+        - {x: 41.5, y: -113.5}
+        - {x: 88.5, y: -64.5}
+        - {x: 90.5, y: -49.5}
+    - name: red_idle_1
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 3595
+        width: 357
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 90, y: 29.5}
+        - {x: 80, y: 81.5}
+        - {x: 37, y: 121.5}
+        - {x: -37, y: 121.5}
+        - {x: -76, y: 89.5}
+        - {x: -89, y: 42.5}
+        - {x: -89, y: -44.5}
+        - {x: -76, y: -88.5}
+        - {x: -28, y: -120.5}
+        - {x: 30, y: -120.5}
+        - {x: 77, y: -82.5}
+        - {x: 89, y: -58.5}
+        - {x: 90, y: -37.5}
+    - name: red_idle_2
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 3597
+        width: 359
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.5, y: 121}
+        - {x: -32.5, y: 121}
+        - {x: -62.5, y: 107}
+        - {x: -89.5, y: 47}
+        - {x: -89.5, y: -39}
+        - {x: -81.5, y: -86}
+        - {x: -48.5, y: -109}
+        - {x: -31.5, y: -117}
+        - {x: -19.5, y: -120}
+        - {x: 38.5, y: -120}
+        - {x: 90.5, y: -69}
+        - {x: 90.5, y: 35}
+        - {x: 78.5, y: 96}
+    - name: red_idle_3
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 3598
+        width: 358
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36.5, y: 120}
+        - {x: -37.5, y: 120}
+        - {x: -74.5, y: 87}
+        - {x: -82.5, y: 67}
+        - {x: -89.5, y: 46}
+        - {x: -89.5, y: -37}
+        - {x: -86.5, y: -65}
+        - {x: -68.5, y: -97}
+        - {x: -32.5, y: -120}
+        - {x: 35.5, y: -120}
+        - {x: 89.5, y: -70}
+        - {x: 89.5, y: 29}
+        - {x: 79.5, y: 80}
+    - name: red_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 3598
+        width: 359
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 90.5, y: 23}
+        - {x: 87.5, y: 48}
+        - {x: 73.5, y: 91}
+        - {x: 30.5, y: 120}
+        - {x: -37.5, y: 120}
+        - {x: -77.5, y: 83}
+        - {x: -89.5, y: 58}
+        - {x: -89.5, y: -65}
+        - {x: -55.5, y: -109}
+        - {x: -29.5, y: -120}
+        - {x: 31.5, y: -120}
+        - {x: 77.5, y: -86}
+        - {x: 86.5, y: -66}
+        - {x: 90.5, y: -44}
+    - name: red_idle_5
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 3088
+        width: 358
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76.5, y: 80}
+        - {x: 52.5, y: 107}
+        - {x: 26.5, y: 120}
+        - {x: -41.5, y: 120}
+        - {x: -86.5, y: 74}
+        - {x: -89.5, y: 43}
+        - {x: -89.5, y: -60}
+        - {x: -48.5, y: -120}
+        - {x: 22.5, y: -120}
+        - {x: 48.5, y: -109}
+        - {x: 90.5, y: -72}
+        - {x: 90.5, y: 30}
+    - name: red_idle_6
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 3088
+        width: 357
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 90, y: 24}
+        - {x: 80, y: 76}
+        - {x: 39, y: 120}
+        - {x: -42, y: 120}
+        - {x: -75, y: 85}
+        - {x: -89, y: 44}
+        - {x: -89, y: -58}
+        - {x: -56, y: -110}
+        - {x: -43, y: -120}
+        - {x: 30, y: -120}
+        - {x: 58, y: -113}
+        - {x: 72, y: -83}
+        - {x: 87, y: -61}
+        - {x: 90, y: -31}
+    - name: red_idle_7
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 3088
+        width: 358
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76.5, y: 80}
+        - {x: 52.5, y: 107}
+        - {x: 26.5, y: 120}
+        - {x: -41.5, y: 120}
+        - {x: -86.5, y: 74}
+        - {x: -89.5, y: 43}
+        - {x: -89.5, y: -60}
+        - {x: -48.5, y: -120}
+        - {x: 22.5, y: -120}
+        - {x: 48.5, y: -109}
+        - {x: 90.5, y: -72}
+        - {x: 90.5, y: 30}
+    - name: red_idle_8
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 3088
+        width: 358
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 89.5, y: 24}
+        - {x: 79.5, y: 76}
+        - {x: 38.5, y: 120}
+        - {x: -42.5, y: 120}
+        - {x: -75.5, y: 85}
+        - {x: -89.5, y: 44}
+        - {x: -89.5, y: -58}
+        - {x: -56.5, y: -110}
+        - {x: -43.5, y: -120}
+        - {x: 29.5, y: -120}
+        - {x: 57.5, y: -113}
+        - {x: 71.5, y: -83}
+        - {x: 86.5, y: -61}
+        - {x: 89.5, y: -31}
+    - name: red_idle_9
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 3088
+        width: 358
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76.5, y: 80}
+        - {x: 52.5, y: 107}
+        - {x: 26.5, y: 120}
+        - {x: -41.5, y: 120}
+        - {x: -86.5, y: 74}
+        - {x: -89.5, y: 43}
+        - {x: -89.5, y: -60}
+        - {x: -48.5, y: -120}
+        - {x: 22.5, y: -120}
+        - {x: 48.5, y: -109}
+        - {x: 90.5, y: -72}
+        - {x: 90.5, y: 30}
+    - name: red_idle_10
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2576
+        width: 359
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 90.5, y: 23}
+        - {x: 87.5, y: 48}
+        - {x: 73.5, y: 91}
+        - {x: 30.5, y: 120}
+        - {x: -37.5, y: 120}
+        - {x: -77.5, y: 83}
+        - {x: -89.5, y: 58}
+        - {x: -89.5, y: -65}
+        - {x: -55.5, y: -109}
+        - {x: -29.5, y: -120}
+        - {x: 31.5, y: -120}
+        - {x: 77.5, y: -86}
+        - {x: 86.5, y: -66}
+        - {x: 90.5, y: -44}
+    - name: red_idle_11
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 2576
+        width: 357
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: 120}
+        - {x: -37, y: 120}
+        - {x: -74, y: 87}
+        - {x: -82, y: 67}
+        - {x: -89, y: 46}
+        - {x: -89, y: -37}
+        - {x: -86, y: -65}
+        - {x: -68, y: -97}
+        - {x: -32, y: -120}
+        - {x: 36, y: -120}
+        - {x: 90, y: -70}
+        - {x: 90, y: 29}
+        - {x: 80, y: 80}
+    - name: red_idle_12
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 2575
+        width: 359
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 73.5, y: 92}
+        - {x: 30.5, y: 121}
+        - {x: -37.5, y: 121}
+        - {x: -77.5, y: 84}
+        - {x: -89.5, y: 45}
+        - {x: -89.5, y: -47}
+        - {x: -87.5, y: -61}
+        - {x: -51.5, y: -112}
+        - {x: -23.5, y: -120}
+        - {x: 34.5, y: -120}
+        - {x: 90.5, y: -69}
+        - {x: 90.5, y: 24}
+        - {x: 87.5, y: 49}
+    - name: red_idle_13
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 2575
+        width: 358
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 78.5, y: 81}
+        - {x: 50.5, y: 108}
+        - {x: 31.5, y: 121}
+        - {x: -37.5, y: 121}
+        - {x: -74.5, y: 88}
+        - {x: -87.5, y: 70}
+        - {x: -89.5, y: 54}
+        - {x: -89.5, y: -53}
+        - {x: -70.5, y: -97}
+        - {x: -39.5, y: -120}
+        - {x: 25.5, y: -120}
+        - {x: 48.5, y: -114}
+        - {x: 85.5, y: -66}
+        - {x: 89.5, y: -47}
+        - {x: 89.5, y: 24}
+    - name: red_idle_14
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 2573
+        width: 359
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 90.5, y: 73.5}
+        - {x: 48.5, y: 121.5}
+        - {x: -32.5, y: 121.5}
+        - {x: -62.5, y: 107.5}
+        - {x: -89.5, y: 47.5}
+        - {x: -89.5, y: -43.5}
+        - {x: -68.5, y: -100.5}
+        - {x: -31.5, y: -120.5}
+        - {x: 17.5, y: -120.5}
+        - {x: 29.5, y: -117.5}
+        - {x: 45.5, y: -106.5}
+        - {x: 79.5, y: -86.5}
+        - {x: 90.5, y: -53.5}
+    - name: red_idle_15
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 2056
+        width: 359
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 80.5, y: 84.5}
+        - {x: 52.5, y: 109.5}
+        - {x: 26.5, y: 122.5}
+        - {x: -41.5, y: 122.5}
+        - {x: -84.5, y: 75.5}
+        - {x: -89.5, y: 49.5}
+        - {x: -89.5, y: -60.5}
+        - {x: -47.5, y: -116.5}
+        - {x: -32.5, y: -122.5}
+        - {x: 13.5, y: -122.5}
+        - {x: 52.5, y: -111.5}
+        - {x: 86.5, y: -61.5}
+        - {x: 90.5, y: -41.5}
+        - {x: 90.5, y: 24.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
