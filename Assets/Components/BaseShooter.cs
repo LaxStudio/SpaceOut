@@ -3,11 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BaseShooter : MonoBehaviour {
-
-    public GameObject projectile;
+public abstract class BaseShooter : MonoBehaviour
+{
     private bool _hasFireRateCD;
-    public FloatReference _fireRate;
+    public float _fireRate = 1;
 
     // Use this for initialization
     void Start ()
@@ -18,21 +17,26 @@ public abstract class BaseShooter : MonoBehaviour {
 
     public abstract void OnStart();
 
-    public abstract Boolean CanShoot();
-
     public abstract Vector3 GetTarget();
 
-    // Update is called once per frame
-    void Update ()
+    public abstract Transform GetProjectile();
+
+    public void SetFireRate(float fireRate)
     {
-        if (CanShoot() && !_hasFireRateCD)
+        _fireRate = fireRate;
+    }
+
+    public void Shoot()
+    {
+        if (!_hasFireRateCD)
         {
-            StartCoroutine(Shoot(_fireRate));
+            StartCoroutine(ShootLoop(_fireRate));
         }
     }
 
-    private IEnumerator Shoot(float fireRate)
+    private IEnumerator ShootLoop(float fireRate)
     {
+        var projectile = GetProjectile();
         if (projectile == null)
         {
             Debug.Log("No projectile equipped");

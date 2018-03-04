@@ -20,10 +20,10 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 10
     Variable: {fileID: 0}
-  MaxMagAmount: 0
-  MaxAmmoAmount: 0
+  MaxMagAmount: 10
+  MaxAmmoAmount: 50
   TwoHanded: 1
-  Projectile: {fileID: 4496328752278344, guid: 443a8c590301f984ab1dc35cc8cdd116, type: 2}
+  Projectile: {fileID: 4363489210696842, guid: 69e39163bdb46904cb8393b4ce1a8825, type: 2}
   ReloadOneBullet: 0
   ReloadTime:
     UseConstant: 1

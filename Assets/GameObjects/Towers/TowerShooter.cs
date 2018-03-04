@@ -14,7 +14,8 @@ public class TowerShooter : BaseShooter
     public FloatReference range;
     private List<GameObject> possibleTargets = new List<GameObject>();
     public List<StringVariable> targetTags;
-     
+    public GameObject projectile;
+
     override public void OnStart()
     {
         GetComponent<CircleCollider2D>().radius = range;
@@ -60,9 +61,13 @@ public class TowerShooter : BaseShooter
         this.target = bestTarget;
     }
 
-    override public Boolean CanShoot()
+
+    void Update()
     {
-        return HasTarget();
+        if (HasTarget())
+        {
+            Shoot();
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -93,5 +98,10 @@ public class TowerShooter : BaseShooter
         }
 
         PickTarget();
+    }
+
+    public override Transform GetProjectile()
+    {
+        return projectile.transform;
     }
 }

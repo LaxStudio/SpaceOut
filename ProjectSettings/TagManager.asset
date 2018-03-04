@@ -17,16 +17,16 @@ TagManager:
   - UI
   - 
   - 
-  - Player
-  - Unit
-  - Gun
+  - Players
+  - Equipped
   - 
   - 
   - 
+  - WorldItems
   - 
   - 
-  - 
-  - 
+  - GroundEnemies
+  - FlyingEnemies
   - 
   - 
   - 

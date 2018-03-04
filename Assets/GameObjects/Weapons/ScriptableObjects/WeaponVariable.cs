@@ -27,7 +27,7 @@ public class WeaponVariable : ScriptableObject
     public bool TwoHanded;
 
     [Tooltip("The projectile prefab.")]
-    public Transform Projectile; // TODO change this to a scriptable object
+    public Transform Projectile;
 
     [Tooltip("Reload one bullet at the time.")]
     public bool ReloadOneBullet; // TODO fix reload weapon, one bullet at the time or the whole mag on reload
