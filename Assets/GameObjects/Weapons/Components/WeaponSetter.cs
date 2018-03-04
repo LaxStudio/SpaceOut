@@ -25,7 +25,7 @@ public class WeaponSetter : MonoBehaviour {
 	    _ammo = GetComponent<Ammunition>();
 
         if (_ammo != null)
-            _ammo.Initialize(Weapon.ReloadTime, Weapon.MaxAmmoAmount, Weapon.MaxMagAmount);
+            _ammo.Initialize(Weapon);
 
         if (_spriteRenderer != null)
             _spriteRenderer.sprite = Weapon.Avatar;

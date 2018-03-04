@@ -19,21 +19,23 @@ public class Ammunition : MonoBehaviour
     private bool _reloading;
     private float _reloadTime;
 
-    public void Initialize(float reloadTime, int maxAmmo, int maxMag)
+    public void Initialize(WeaponVariable weaponData)
     {
-        _reloadTime = reloadTime;
-        _maxAmmo = maxAmmo;
-        _maxMag = maxMag;
+        _reloadTime = weaponData.ReloadTime;
+        _maxAmmo = weaponData.MaxAmmoAmount;
+        _maxMag = weaponData.MaxMagAmount;
+        _currentAmmo = weaponData.AmmoToStartWith;
     }
 
     // Use this for initialization
-    void Start ()
-	{
-	    _reloading = false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+        _reloading = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         if (Input.GetKeyDown(ReloadWeaponKey) && !_reloading)
         {
@@ -47,29 +49,27 @@ public class Ammunition : MonoBehaviour
     public IEnumerator Reloading()
     {
         _reloading = true;
-        while (true)
+
+        var bulletsToReload = _maxMag - _currentMag;
+
+        if (bulletsToReload == 0 || _currentAmmo == 0)
+            yield break;
+
+        yield return new WaitForSeconds(_reloadTime);
+
+        if (_currentAmmo < bulletsToReload)
         {
-            var bulletsToReload = _maxMag - _currentMag;
-
-            if (bulletsToReload == 0 || _currentAmmo == 0)
-                yield break;
-
-            yield return new WaitForSeconds(_reloadTime);
-
-            if (_currentAmmo < bulletsToReload)
-            {
-                _currentMag += _currentAmmo;
-                _currentAmmo = 0;
-            }
-            else
-            {
-                _currentMag += bulletsToReload;
-                _currentAmmo -= bulletsToReload;
-            }
-
-            _reloading = false;
-            break;
+            _currentMag += _currentAmmo;
+            _currentAmmo = 0;
         }
+        else
+        {
+            _currentMag += bulletsToReload;
+            _currentAmmo -= bulletsToReload;
+        }
+
+        _reloading = false;
+
     }
 
     /// <summary>

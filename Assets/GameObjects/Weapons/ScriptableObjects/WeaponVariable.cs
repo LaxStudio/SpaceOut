@@ -23,6 +23,9 @@ public class WeaponVariable : ScriptableObject
     [Tooltip("Amount of bullets in total.")]
     public int MaxAmmoAmount;
 
+    [Tooltip("When weapon is picked up, how much ammo does player starts with?.")]
+    public int AmmoToStartWith;
+
     [Tooltip("Causes players sprite to change to a different stance.")]
     public bool TwoHanded;
 
