@@ -2,8 +2,8 @@
 
 public class Traveler : MonoBehaviour
 {
-    public FloatReference speed;
-    public FloatReference travelDistance;
+    public FloatReference Speed;
+    public FloatReference TravelDistance;
     private Vector2 dir;
     private Vector3 start;
 
@@ -16,13 +16,13 @@ public class Traveler : MonoBehaviour
     void Update ()
     {
         var distance = Vector3.Distance(transform.position, start);
-        if (dir == null || (distance >= travelDistance))
+        if (dir == null || (distance >= TravelDistance))
         {
             Destroy(gameObject);
             return;
         }
         
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        transform.Translate(dir.normalized * Speed * Time.deltaTime, Space.World);
     }
 
     public void SetDirectionWithTarget(Vector3 target)
@@ -35,4 +35,12 @@ public class Traveler : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void Set(float speed, float travelDistance)
+    {
+        Speed.UseConstant = true;
+        Speed.ConstantValue = speed;
+        TravelDistance.UseConstant = true;
+        TravelDistance.ConstantValue = travelDistance;
+
+    }
 }
