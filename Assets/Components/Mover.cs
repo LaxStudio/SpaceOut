@@ -20,7 +20,7 @@ public class Mover : MonoBehaviour
         public string WalkSidewaysParameterName;
     }
 
-    public FloatVariable MoveRate;
+    private float _moveRate;
     public AnimationParameters AnimParameters;
     
     private Rigidbody2D _rb2d;
@@ -33,6 +33,11 @@ public class Mover : MonoBehaviour
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
     }
+
+    public void Setup(float moveSpeed)
+    {
+        _moveRate = moveSpeed;
+    }
     
     public void Move(bool up, bool down, bool right, bool left)
     {
@@ -40,7 +45,7 @@ public class Mover : MonoBehaviour
         var horizontal = (right ? 1 : 0) - (left ? 1 : 0);
         var moveNormal = new Vector3(horizontal, vertical).normalized;
         SetAnimation(horizontal, vertical);
-        var wantedPosition = transform.position + (moveNormal * Time.fixedDeltaTime * MoveRate.Value);
+        var wantedPosition = transform.position + (moveNormal * Time.fixedDeltaTime * _moveRate);
         _rb2d.MovePosition(wantedPosition);
     }
 
