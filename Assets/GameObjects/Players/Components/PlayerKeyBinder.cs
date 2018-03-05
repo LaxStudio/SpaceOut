@@ -1,24 +1,32 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-[RequireComponent(typeof(WeaponHolster))]
-[RequireComponent(typeof(Collider2D))]
-public class PlayerController : MonoBehaviour
+[
+    RequireComponent(typeof(WeaponHolster)),
+    RequireComponent(typeof(Mover)),
+    RequireComponent(typeof(Collider2D))
+]
+public class PlayerKeyBinder : MonoBehaviour
 {
     public KeyCode DropWeaponKey = KeyCode.G;
     public KeyCode FireWeaponKey = KeyCode.Mouse0;
     public KeyCode PickUpKey = KeyCode.E;
+    public KeyCode MoveUp = KeyCode.W;
+    public KeyCode MoveDown = KeyCode.S;
+    public KeyCode MoveRight = KeyCode.D;
+    public KeyCode MoveLeft = KeyCode.A;
 
     private WeaponHolster _weaponHolster;
     private Collider2D _collider;
+    private Mover _mover;
 
-    void Start ()
+    void Start()
     {
         _weaponHolster = GetComponent<WeaponHolster>();
         _collider = GetComponent<Collider2D>();
-	}
-	
-	void Update ()
+        _mover = GetComponent<Mover>();
+    }
+
+    void Update()
     {
         if (Input.GetKeyDown(DropWeaponKey))
         {
@@ -34,6 +42,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        _mover.Move(
+            Input.GetKey(MoveUp), 
+            Input.GetKey(MoveDown), 
+            Input.GetKey(MoveRight), 
+            Input.GetKey(MoveLeft)
+        );
+    }
+
+    /// <summary>
+    /// Handles pickup
+    /// TODO make this to component
+    /// </summary>
     private void Pickup()
     {
         var colliders = new Collider2D[10];
@@ -54,7 +76,7 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
+    
     void OnTriggerEnter2D(Collider2D collider)
     {
         // TODO refactor this to PickUpAbleItem

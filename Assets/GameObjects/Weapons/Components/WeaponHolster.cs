@@ -22,7 +22,7 @@ public class WeaponHolster : MonoBehaviour {
         }
         
         weapon.transform.parent = transform;
-        weapon.transform.position = new Vector3(transform.position.x+0.5f, transform.position.y);
+        weapon.transform.position = new Vector3(transform.position.x+0.7f, transform.position.y);
         weapon.layer = (int)GameLayers.Equipped;
 
         ActiveWeapon = weapon;
