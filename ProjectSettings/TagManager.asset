@@ -8,6 +8,7 @@ TagManager:
   - Tower
   - Projectile
   - Wall
+  - ObjectsPool
   layers:
   - Default
   - TransparentFX
