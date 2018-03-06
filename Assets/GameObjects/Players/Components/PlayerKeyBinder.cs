@@ -18,12 +18,14 @@ public class PlayerKeyBinder : MonoBehaviour
     private WeaponHolster _weaponHolster;
     private Collider2D _collider;
     private Mover _mover;
+    private MoverAnimation _moverAnimation;
 
     void Start()
     {
         _weaponHolster = GetComponent<WeaponHolster>();
         _collider = GetComponent<Collider2D>();
         _mover = GetComponent<Mover>();
+        _moverAnimation = GetComponent<MoverAnimation>();
     }
 
     void Update()
@@ -50,6 +52,7 @@ public class PlayerKeyBinder : MonoBehaviour
             Input.GetKey(MoveRight), 
             Input.GetKey(MoveLeft)
         );
+
     }
 
     /// <summary>
