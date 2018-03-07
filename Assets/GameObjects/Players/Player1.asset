@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Name: Player1
   m_EditorClassIdentifier: 
   MoveSpeed: 5
+  InventorySize: 10

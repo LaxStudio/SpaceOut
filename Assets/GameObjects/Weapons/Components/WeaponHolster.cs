@@ -1,6 +1,4 @@
-﻿
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Weapon inventory for a player
@@ -20,7 +18,13 @@ public class WeaponHolster : MonoBehaviour {
         {
             Drop();
         }
-        
+
+        var renderer = weapon.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            renderer.enabled = true;
+        }
+
         weapon.transform.parent = transform;
         weapon.transform.position = new Vector3(transform.position.x+0.7f, transform.position.y);
         weapon.layer = (int)GameLayers.Equipped;

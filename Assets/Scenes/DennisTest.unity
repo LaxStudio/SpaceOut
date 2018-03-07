@@ -1659,6 +1659,31 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0.59
       objectReference: {fileID: 0}
+    - target: {fileID: 114619487753401000, guid: dc0b9948172f8eb4cac9f37f825cf857,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433702842598334, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433702842598334, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.0066412715
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433702842598334, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433702842598334, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.999978
+      objectReference: {fileID: 0}
+    - target: {fileID: 4433702842598334, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.76100004
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114968651041563462, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
@@ -1839,6 +1864,17 @@ GameObject:
   m_PrefabParentObject: {fileID: 1417169337641758, guid: dc0b9948172f8eb4cac9f37f825cf857,
     type: 2}
   m_PrefabInternal: {fileID: 200821001}
+--- !u!114 &1600456863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600456862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ada0abcfd4fea74b880b4b0811b3b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1600456871 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4433702842598334, guid: dc0b9948172f8eb4cac9f37f825cf857,

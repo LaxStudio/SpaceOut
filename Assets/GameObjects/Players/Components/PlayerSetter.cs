@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Mover))]
+[
+    RequireComponent(typeof(Mover)),
+    RequireComponent(typeof(Inventory)),
+]
 public class PlayerSetter : MonoBehaviour
 {
     public PlayerModel Model;
-
-    private Mover _mover;
-
+    
     void Start()
     {
-        _mover = GetComponent<Mover>();
-
-        _mover.Setup(Model.MoveSpeed);
+        GetComponent<Mover>().Setup(Model.MoveSpeed);
+        GetComponent<Inventory>().Setup(Model.InventorySize);
     }
 }
