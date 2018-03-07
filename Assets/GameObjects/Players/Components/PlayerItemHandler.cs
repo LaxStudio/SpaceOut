@@ -16,7 +16,7 @@ public class PlayerItemHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        var item = collider.gameObject.GetComponent<Item>();
+        var item = collider.gameObject.GetComponent<ItemBase>();
         if (item != null)
         {
             item.Hover();
@@ -25,7 +25,7 @@ public class PlayerItemHandler : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        var item = collider.gameObject.GetComponent<Item>();
+        var item = collider.gameObject.GetComponent<ItemBase>();
         if (item != null)
         {
             item.UnHover();
