@@ -3,9 +3,11 @@
 /// <summary>
 /// Like a constructor for Weapon GameObject
 /// </summary>
-[RequireComponent(typeof(SpriteRenderer))]
-[RequireComponent(typeof(Ammunition))]
-[RequireComponent(typeof(WeaponShooter))]
+[
+    RequireComponent(typeof(SpriteRenderer)),
+    RequireComponent(typeof(Ammunition)),
+    RequireComponent(typeof(WeaponShooter))
+]
 public class WeaponSetter : MonoBehaviour {
 
     public WeaponVariable Weapon;
@@ -32,15 +34,5 @@ public class WeaponSetter : MonoBehaviour {
 
         var shooter = GetComponent<WeaponShooter>();
         shooter.SetFireRate(Weapon.FireRate);
-    }
-
-    public void Highlight()
-    {
-        GetComponent<SpriteRenderer>().color = Color.gray;
-    }
-
-    public void UnHighlight()
-    {
-        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

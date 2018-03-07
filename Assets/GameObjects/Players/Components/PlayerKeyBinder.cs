@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
 [
-    RequireComponent(typeof(WeaponHolster)),
     RequireComponent(typeof(Mover)),
-    RequireComponent(typeof(Collider2D))
+    RequireComponent(typeof(WeaponHolster)),
+    RequireComponent(typeof(PlayerItemHandler))
 ]
 public class PlayerKeyBinder : MonoBehaviour
 {
@@ -15,17 +15,15 @@ public class PlayerKeyBinder : MonoBehaviour
     public KeyCode MoveRight = KeyCode.D;
     public KeyCode MoveLeft = KeyCode.A;
 
-    private WeaponHolster _weaponHolster;
-    private Collider2D _collider;
     private Mover _mover;
-    private MoverAnimation _moverAnimation;
+    private WeaponHolster _weaponHolster;
+    private PlayerItemHandler _itemHandler;
 
     void Start()
     {
-        _weaponHolster = GetComponent<WeaponHolster>();
-        _collider = GetComponent<Collider2D>();
         _mover = GetComponent<Mover>();
-        _moverAnimation = GetComponent<MoverAnimation>();
+        _weaponHolster = GetComponent<WeaponHolster>();
+        _itemHandler = GetComponent<PlayerItemHandler>();
     }
 
     void Update()
@@ -40,7 +38,7 @@ public class PlayerKeyBinder : MonoBehaviour
         }
         if (Input.GetKeyDown(PickUpKey))
         {
-            Pickup();
+            _itemHandler.Pickup();
         }
     }
 
@@ -53,50 +51,5 @@ public class PlayerKeyBinder : MonoBehaviour
             Input.GetKey(MoveLeft)
         );
 
-    }
-
-    /// <summary>
-    /// Handles pickup
-    /// TODO make this to component
-    /// </summary>
-    private void Pickup()
-    {
-        var colliders = new Collider2D[10];
-        var collitionCount = _collider.GetContacts(colliders);
-
-        for (int i = 0; i < collitionCount; i++)
-        {
-            var collider = colliders[i];
-            var go = collider.gameObject; //This is the game object you collided with
-            if (go == gameObject) continue; //Skip the object itself
-
-            //var item = go.GetComponent<Pickupable>();
-
-            var weapon = go.GetComponent<WeaponSetter>();
-            if (weapon != null)
-            {
-                _weaponHolster.Equip(go);
-            }
-        }
-    }
-    
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-        // TODO refactor this to PickUpAbleItem
-        var weapon = collider.gameObject.GetComponent<WeaponSetter>();
-        if(weapon != null)
-        {
-            weapon.Highlight();
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D collider)
-    {
-        // TODO refactor this to PickUpAbleItem
-        var weapon = collider.gameObject.GetComponent<WeaponSetter>();
-        if (weapon != null)
-        {
-            weapon.UnHighlight();
-        }
     }
 }

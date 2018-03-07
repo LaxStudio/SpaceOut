@@ -1668,6 +1668,17 @@ GameObject:
   m_PrefabParentObject: {fileID: 1562120554593402, guid: ad75f17145f58464297b96fad1806b2c,
     type: 2}
   m_PrefabInternal: {fileID: 1899608417}
+--- !u!114 &1443635017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443635010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5faee67fa7b52334d85371dde538ef8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1443635018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1702,6 +1713,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Model: {fileID: 11400000, guid: 547812d4e5acebd469d96fd93cf7a288, type: 2}
+--- !u!114 &1600456873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600456862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b03546c7d73ac448ac7e4868020bc0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animParameters:
+    WalkUpParameterName: PlayerWalkUp
+    WalkDownParameterName: PlayerWalkDown
+    WalkSidewaysParameterName: PlayerWalkSideways
+--- !u!114 &1600456874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1600456862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae38c73d831800b4e80a14c5c455ccfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1669979805
 Prefab:
   m_ObjectHideFlags: 0
@@ -1779,19 +1816,19 @@ Prefab:
     - target: {fileID: 20666550905420236, guid: f3dc389de83c22141ac38924f642f27c,
         type: 2}
       propertyPath: orthographic size
-      value: 8.4375
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4975962623414786, guid: f3dc389de83c22141ac38924f642f27c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.56521726
       objectReference: {fileID: 0}
     - target: {fileID: 4975962623414786, guid: f3dc389de83c22141ac38924f642f27c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.27441832
       objectReference: {fileID: 0}
     - target: {fileID: 4975962623414786, guid: f3dc389de83c22141ac38924f642f27c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3dc389de83c22141ac38924f642f27c, type: 2}
