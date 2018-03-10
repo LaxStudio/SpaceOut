@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 212861523139520704}
   - component: {fileID: 114247356315774910}
   - component: {fileID: 210789244724446602}
+  - component: {fileID: 114946953630306992}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -203,6 +204,20 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114946953630306992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1483385730710542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b90c45306892d42479ce4de9d85b64b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  startHp: 100
+  hpBar: {fileID: 0}
 --- !u!210 &210789244724446602
 SortingGroup:
   m_ObjectHideFlags: 1
@@ -247,7 +262,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7bd2ba110c0e3494bb881035cb9334f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a77f4d58d1a28514ba76bba2330d870d, type: 3}
   m_Color: {r: 0.5294118, g: 0.038927343, b: 0.038927343, a: 1}
   m_FlipX: 0
   m_FlipY: 0
