@@ -11,9 +11,9 @@ public class MoverAnimation : MonoBehaviour
     [Serializable]
     public class AnimationParameters
     {
-        public string WalkUpParameterName;
-        public string WalkDownParameterName;
-        public string WalkSidewaysParameterName;
+        public AnimationClip WalkUpParameterName;
+        public AnimationClip WalkDownParameterName;
+        public AnimationClip WalkSidewaysParameterName;
     }
 
     [SerializeField]
@@ -39,24 +39,24 @@ public class MoverAnimation : MonoBehaviour
     /// <param name="mover"></param>
     public void AnimateMove(Vector2 mover)
     {
-        _animator.SetBool(_animParameters.WalkSidewaysParameterName, mover.x > 0 || mover.x < 0);
+        _animator.SetBool(_animParameters.WalkSidewaysParameterName.name, mover.x > 0 || mover.x < 0);
 
         FlipSpriteChecker(mover.x);
 
         if (mover.y > 0)
         {
-            _animator.SetBool(_animParameters.WalkUpParameterName, true);
-            _animator.SetBool(_animParameters.WalkDownParameterName, false);
+            _animator.SetBool(_animParameters.WalkUpParameterName.name, true);
+            _animator.SetBool(_animParameters.WalkDownParameterName.name, false);
         }
         else if (mover.y < 0)
         {
-            _animator.SetBool(_animParameters.WalkUpParameterName, false);
-            _animator.SetBool(_animParameters.WalkDownParameterName, true);
+            _animator.SetBool(_animParameters.WalkUpParameterName.name, false);
+            _animator.SetBool(_animParameters.WalkDownParameterName.name, true);
         }
         else
         {
-            _animator.SetBool(_animParameters.WalkUpParameterName, false);
-            _animator.SetBool(_animParameters.WalkDownParameterName, false);
+            _animator.SetBool(_animParameters.WalkUpParameterName.name, false);
+            _animator.SetBool(_animParameters.WalkDownParameterName.name, false);
         }
     }
 
