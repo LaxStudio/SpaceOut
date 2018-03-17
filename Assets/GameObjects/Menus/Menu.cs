@@ -4,48 +4,86 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour {
 
-    public MenuButton menuButtonPrefab;
-    public MenuButton selected;
-    public TMPro.TextMeshProUGUI TextLabel; 
+    [System.Serializable]
+    public class MenuAction
+    {
+        public Color Color;
+        public Sprite Sprite;
+        public string Title;
+    }
+
+    public MenuButton MenuButtonPrefab;
+    public MenuButton SelectedButton;
+    
+    public TMPro.TextMeshProUGUI TextLabel;
+
+    public MenuAction[] ButtonOptions;
+    public string Title;
 
     private float distance = 100f;
+    private KeyCode _menuKeyCode;
+    private Transform _menuContentWrapper;
 
-	// Use this for initialization
-	public void SpawnButtons (MenuInteractable obj) {
-        StartCoroutine(AnimateButtons(obj));
-
-	}
-
-    IEnumerator AnimateButtons (MenuInteractable obj)
+    public void Awake()
     {
-        for (var i = 0; i < obj.options.Length; i++)
-        {
-            var newButton = Instantiate(menuButtonPrefab) as MenuButton;
-            newButton.transform.SetParent(transform, false);
+        _menuContentWrapper = transform.GetChild(0);
+    }
 
-            var theta = (2 * Mathf.PI / obj.options.Length) * i;
+    public void Initialize(KeyCode menuKeyCode, Transform parentTransform)
+    {
+        transform.SetParent(parentTransform, false);
+        _menuContentWrapper.position = Input.mousePosition;
+
+        _menuKeyCode = menuKeyCode;
+        StartCoroutine(AnimateButtons());
+        TextLabel.text = Title.ToUpper();
+    }
+
+    IEnumerator AnimateButtons ()
+    {
+        for (var i = 0; i < ButtonOptions.Length; i++)
+        {
+            var newButton = Instantiate(MenuButtonPrefab) as MenuButton;
+            newButton.transform.SetParent(_menuContentWrapper); // Place the buttons in the MenuContentWrapper
+
+            var theta = (2 * Mathf.PI / ButtonOptions.Length) * i;
             var xPos = Mathf.Sin(theta);
             var yPos = Mathf.Cos(theta);
             newButton.transform.localPosition = new Vector3(xPos, yPos, 0f) * distance;
 
-            newButton.Circle.color = obj.options[i].Color;
-            newButton.Icon.sprite = obj.options[i].Sprite;
-            newButton.Title = obj.options[i].Title;
-            newButton.thisMenu = this;
-            newButton.Anim();
+            newButton.Circle.color = ButtonOptions[i].Color;
+            newButton.Icon.sprite = ButtonOptions[i].Sprite;
+            newButton.Title = ButtonOptions[i].Title;
+            newButton.ButtonAction = ToggleSelected;
+
             yield return new WaitForSeconds(0.06f);
         }
     }
 
+    private void ToggleSelected(MenuButton menuButton)
+    {
+        if(SelectedButton != menuButton)
+        {
+            SelectedButton = menuButton;
+            TextLabel.text = SelectedButton.Title;
+        }
+        else
+        {
+            SelectedButton = null;
+            TextLabel.text = Title;
+        }
+        
+    }
+
     private void Update()
     {
-        if(Input.GetMouseButtonUp(0))
+        if(Input.GetKeyUp(_menuKeyCode))
         {
             Destroy(gameObject);
 
-            if (selected)
+            if (SelectedButton)
             {
-                Debug.Log(selected.Title + " was selected");
+                Debug.Log(SelectedButton.Title + " was selected");
             }
 
         }

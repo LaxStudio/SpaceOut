@@ -9,13 +9,14 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public Image Circle;
     public Image Icon;
     public string Title;
-    public Menu thisMenu;
-    public float speed = 8f;
+    public float Speed = 8f;
+    public Action<MenuButton> ButtonAction;
 
     Color defaultColor;
 
-    public void Anim()
+    public void Start()
     {
+        Circle = GetComponent<Image>();
         StartCoroutine(AnimateButtonIn());
     }
 
@@ -23,30 +24,25 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         transform.localScale = Vector3.zero;
         var timer = 0f;
-        while(timer < (1 / speed))
+        while(timer < (1 / Speed))
         {
-            transform.localScale = Vector3.one * timer * speed;
+            transform.localScale = Vector3.one * timer * Speed;
             timer += Time.deltaTime;
             yield return null;
         }
         transform.localScale = Vector3.one;
     }
 
-	// Use this for initialization
-	void Start () {
-        Circle = GetComponent<Image>();
-	}
-
     public void OnPointerEnter(PointerEventData eventData)
     {
-        thisMenu.selected = this;
+        ButtonAction.Invoke(this);
         defaultColor = Circle.color;
         Circle.color = Color.white;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        thisMenu.selected = null;
+        ButtonAction.Invoke(this);
         Circle.color = defaultColor;
     }
 }

@@ -4,11 +4,13 @@
     RequireComponent(typeof(Mover)),
     RequireComponent(typeof(WeaponHolster)),
     RequireComponent(typeof(PlayerItemHandler))
+    RequireComponent(typeof(MenuSpawner))
 ]
 public class PlayerKeyBinder : MonoBehaviour
 {
     public KeyCode DropWeaponKey = KeyCode.G;
     public KeyCode FireWeaponKey = KeyCode.Mouse0;
+    public KeyCode SecondaryActionKey = KeyCode.Mouse1;
     public KeyCode PickUpKey = KeyCode.E;
     public KeyCode MoveUp = KeyCode.W;
     public KeyCode MoveDown = KeyCode.S;
@@ -18,12 +20,14 @@ public class PlayerKeyBinder : MonoBehaviour
     private Mover _mover;
     private WeaponHolster _weaponHolster;
     private PlayerItemHandler _itemHandler;
+    private MenuSpawner _menuSpawner;
 
     void Start()
     {
         _mover = GetComponent<Mover>();
         _weaponHolster = GetComponent<WeaponHolster>();
         _itemHandler = GetComponent<PlayerItemHandler>();
+        _menuSpawner = GetComponent<MenuSpawner>();
     }
 
     void Update()
@@ -39,6 +43,11 @@ public class PlayerKeyBinder : MonoBehaviour
         if (Input.GetKeyDown(PickUpKey))
         {
             _itemHandler.Pickup();
+        }
+
+        if (Input.GetKeyDown(SecondaryActionKey))
+        {
+            _menuSpawner.SpawnMenu(SecondaryActionKey);
         }
     }
 

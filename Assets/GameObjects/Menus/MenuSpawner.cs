@@ -4,24 +4,12 @@ using UnityEngine;
 
 public class MenuSpawner : MonoBehaviour {
 
-    public static MenuSpawner Instance;
-    public Menu menuPrefab;
+    public Menu MenuPrefab;
 
-    private void Awake()
+    public void SpawnMenu(KeyCode menuKeyCode)
     {
-        if(Instance == null)
-            Instance = this;
-    }
-    
-    public void SpawnMenu(MenuInteractable obj)
-    {
-        var menu = Instantiate(menuPrefab) as Menu;
-        menu.transform.SetParent(transform, false);
-        menu.transform.position = Input.mousePosition;
-        menu.SpawnButtons(obj);
-        menu.TextLabel.text = obj.Title.ToUpper();
-
-
+        var menu = Instantiate(MenuPrefab) as Menu;
+        menu.Initialize(menuKeyCode, transform);
     }
 
 }
