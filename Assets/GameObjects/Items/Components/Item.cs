@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
+[
+    RequireComponent(typeof(SpriteRenderer)),
+    RequireComponent(typeof(LayerSortOrderHandler))
+]
 public class Item : ItemBase
 {
     private SpriteRenderer _spriteRenderer;

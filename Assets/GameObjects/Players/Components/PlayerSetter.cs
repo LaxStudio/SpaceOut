@@ -3,6 +3,7 @@
 [
     RequireComponent(typeof(Mover)),
     RequireComponent(typeof(Inventory)),
+    RequireComponent(typeof(LayerSortOrderHandler))
 ]
 public class PlayerSetter : MonoBehaviour
 {
@@ -12,5 +13,6 @@ public class PlayerSetter : MonoBehaviour
     {
         GetComponent<Mover>().Setup(Model.MoveSpeed);
         GetComponent<Inventory>().Setup(Model.InventorySize);
+        
     }
 }

@@ -45,8 +45,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spriteBorder: {x: 120, y: 110, z: 130, w: 110}
+  spritePixelsToUnits: 320
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -57,7 +57,47 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -69,8 +109,33 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
-    physicsShape: []
+    outline:
+    - - {x: -37.5, y: 53.75}
+      - {x: -43.75, y: 26.25}
+      - {x: -43.75, y: -51.25}
+      - {x: -35, y: -53.75}
+      - {x: 32.5, y: -53.75}
+      - {x: 33.75, y: -48.75}
+      - {x: 33.75, y: 36.25}
+      - {x: 20, y: 53.75}
+    physicsShape:
+    - - {x: 23.75, y: 21.25}
+      - {x: 12.5, y: 52.5}
+      - {x: -35, y: 52.5}
+      - {x: -42.5, y: 23.75}
+      - {x: -42.5, y: -50}
+      - {x: -33.75, y: -52.5}
+      - {x: 25, y: -52.5}
+      - {x: 32.5, y: -43.75}
+      - {x: 32.5, y: 11.25}
+    - - {x: -16.25, y: 10}
+      - {x: -6.25, y: 20}
+      - {x: -3.75, y: -6.25}
+      - {x: -26.25, y: -6.25}
+    - - {x: 13.75, y: 6.25}
+      - {x: 16.25, y: 6.25}
+      - {x: 16.25, y: -6.25}
+      - {x: 13.75, y: -6.25}
   spritePackingTag: 
   userData: 
   assetBundleName: 
