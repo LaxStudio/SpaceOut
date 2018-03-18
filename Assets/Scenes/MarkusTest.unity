@@ -1600,6 +1600,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114664643259667682, guid: 715803e05d8935748ac28678eaf29d6f,
+        type: 2}
+      propertyPath: waves.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4852355481067666, guid: 715803e05d8935748ac28678eaf29d6f, type: 2}
       propertyPath: m_LocalPosition.x
       value: -5.98
@@ -1631,6 +1636,22 @@ Prefab:
     - target: {fileID: 4852355481067666, guid: 715803e05d8935748ac28678eaf29d6f, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114664643259667682, guid: 715803e05d8935748ac28678eaf29d6f,
+        type: 2}
+      propertyPath: waves.Array.data[1].enemy
+      value: 
+      objectReference: {fileID: 1483385730710542, guid: 104ab116ed95ffd4f8909da6502c1bbc,
+        type: 2}
+    - target: {fileID: 114664643259667682, guid: 715803e05d8935748ac28678eaf29d6f,
+        type: 2}
+      propertyPath: waves.Array.data[1].amount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114664643259667682, guid: 715803e05d8935748ac28678eaf29d6f,
+        type: 2}
+      propertyPath: waves.Array.data[1].rate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 715803e05d8935748ac28678eaf29d6f, type: 2}
@@ -1795,9 +1816,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.06, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0.375, y: 0.34375, z: 0.40625, w: 0.34375}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 3.2}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 3.2, y: 3.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1940,15 +1961,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1600456862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b03546c7d73ac448ac7e4868020bc0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _animParameters:
-    WalkUpParameterName: PlayerWalkUp
-    WalkDownParameterName: PlayerWalkDown
-    WalkSidewaysParameterName: PlayerWalkSideways
+    WalkUpParameterName: {fileID: 0}
+    WalkDownParameterName: {fileID: 0}
+    WalkSidewaysParameterName: {fileID: 0}
 --- !u!114 &1600456874
 MonoBehaviour:
   m_ObjectHideFlags: 0

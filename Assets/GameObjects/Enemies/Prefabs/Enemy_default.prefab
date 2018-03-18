@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 210789244724446602}
   - component: {fileID: 114946953630306992}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,8 +216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  startHp: 100
-  hpBar: {fileID: 0}
 --- !u!210 &210789244724446602
 SortingGroup:
   m_ObjectHideFlags: 1
