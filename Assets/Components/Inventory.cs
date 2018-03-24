@@ -6,7 +6,9 @@ public class Inventory : MonoBehaviour
     private GameObject[] _inventory;
 
     public bool IsInventoryFull { get { return Array.TrueForAll(_inventory, x => x != null); } }
-    
+
+    private bool _isInventoryEmpty { get { return Array.TrueForAll(_inventory, x => x == null); } }
+
     public bool AddItem(GameObject item)
     {
         if (IsInventoryFull)
@@ -42,5 +44,13 @@ public class Inventory : MonoBehaviour
     public void Setup(int inventorySize)
     {
         _inventory = new GameObject[inventorySize];
+    }
+
+    public GameObject[] GetWeapons()
+    {
+        if (_isInventoryEmpty)
+            return null;
+
+       return Array.FindAll(_inventory, x => x != null && x.GetComponent<WeaponSetter>() != null);
     }
 }

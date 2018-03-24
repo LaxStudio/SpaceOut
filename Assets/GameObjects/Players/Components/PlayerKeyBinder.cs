@@ -4,7 +4,7 @@
     RequireComponent(typeof(Mover)),
     RequireComponent(typeof(WeaponHolster)),
     RequireComponent(typeof(PlayerItemHandler))
-    RequireComponent(typeof(MenuSpawner))
+    RequireComponent(typeof(WeaponMenuSpawner))
 ]
 public class PlayerKeyBinder : MonoBehaviour
 {
@@ -20,14 +20,14 @@ public class PlayerKeyBinder : MonoBehaviour
     private Mover _mover;
     private WeaponHolster _weaponHolster;
     private PlayerItemHandler _itemHandler;
-    private MenuSpawner _menuSpawner;
+    private WeaponMenuSpawner _weaponMenuSpawner;
 
     void Start()
     {
         _mover = GetComponent<Mover>();
         _weaponHolster = GetComponent<WeaponHolster>();
         _itemHandler = GetComponent<PlayerItemHandler>();
-        _menuSpawner = GetComponent<MenuSpawner>();
+        _weaponMenuSpawner = GetComponent<WeaponMenuSpawner>();
     }
 
     void Update()
@@ -47,8 +47,11 @@ public class PlayerKeyBinder : MonoBehaviour
 
         if (Input.GetKeyDown(SecondaryActionKey))
         {
-            _menuSpawner.SpawnMenu(SecondaryActionKey);
+            _weaponMenuSpawner.SpawMenu(SecondaryActionKey);
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
     }
 
     private void FixedUpdate()

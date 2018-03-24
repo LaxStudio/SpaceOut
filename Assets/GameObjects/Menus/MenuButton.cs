@@ -11,6 +11,7 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public string Title;
     public float Speed = 8f;
     public Action<MenuButton> ButtonAction;
+    public Action AcionOnSelected;
 
     Color defaultColor;
 

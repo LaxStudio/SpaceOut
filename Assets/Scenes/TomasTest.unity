@@ -3280,6 +3280,17 @@ Prefab:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212383862951221908, guid: dc0b9948172f8eb4cac9f37f825cf857,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d71034be9982c8b40a850fcb4502bf26,
+        type: 3}
+    - target: {fileID: 212383862951221908, guid: dc0b9948172f8eb4cac9f37f825cf857,
+        type: 2}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114968651041563462, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
     - {fileID: 210439246573167472, guid: dc0b9948172f8eb4cac9f37f825cf857, type: 2}
@@ -3512,6 +3523,31 @@ GameObject:
   m_PrefabParentObject: {fileID: 1562120554593402, guid: ad75f17145f58464297b96fad1806b2c,
     type: 2}
   m_PrefabInternal: {fileID: 1899608417}
+--- !u!61 &1443635012
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443635010}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.34375, y: 0.21875}
+    newSize: {x: 0.75, y: 0.51}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.34375, y: 0.21875}
+  m_EdgeRadius: 0
 --- !u!114 &1443635014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3760,6 +3796,25 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114553766245242980, guid: f3dc389de83c22141ac38924f642f27c,
+        type: 2}
+      propertyPath: m_Priority
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588111938942192, guid: f3dc389de83c22141ac38924f642f27c,
+        type: 2}
+      propertyPath: m_LookaheadSmoothing
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588111938942192, guid: f3dc389de83c22141ac38924f642f27c,
+        type: 2}
+      propertyPath: m_CameraDistance
+      value: 7.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442838992215680, guid: f3dc389de83c22141ac38924f642f27c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -7.11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3dc389de83c22141ac38924f642f27c, type: 2}
   m_IsPrefabParent: 0
@@ -3836,8 +3891,15 @@ Prefab:
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212716483428448032, guid: ad75f17145f58464297b96fad1806b2c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e717d546d2018f4ebdbf7a5dbfa220a,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 114737441385704044, guid: ad75f17145f58464297b96fad1806b2c, type: 2}
     - {fileID: 210277316053933794, guid: ad75f17145f58464297b96fad1806b2c, type: 2}
+    - {fileID: 61289177062819168, guid: ad75f17145f58464297b96fad1806b2c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ad75f17145f58464297b96fad1806b2c, type: 2}
   m_IsPrefabParent: 0

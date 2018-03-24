@@ -1,60 +1,58 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Menu : MonoBehaviour {
-
-    [System.Serializable]
-    public class MenuAction
-    {
-        public Color Color;
-        public Sprite Sprite;
-        public string Title;
-    }
 
     public MenuButton MenuButtonPrefab;
     public MenuButton SelectedButton;
     
     public TMPro.TextMeshProUGUI TextLabel;
 
-    public MenuAction[] ButtonOptions;
+    
     public string Title;
 
     private float distance = 100f;
     private KeyCode _menuKeyCode;
     private Transform _menuContentWrapper;
+    private MenuAction[] _buttonOptions;
 
     public void Awake()
     {
         _menuContentWrapper = transform.GetChild(0);
     }
 
-    public void Initialize(KeyCode menuKeyCode, Transform parentTransform)
+    public void Initialize(KeyCode menuKeyCode, Transform parentTransform, MenuAction[] buttonOptions)
     {
         transform.SetParent(parentTransform, false);
         _menuContentWrapper.position = Input.mousePosition;
 
         _menuKeyCode = menuKeyCode;
-        StartCoroutine(AnimateButtons());
         TextLabel.text = Title.ToUpper();
+        _buttonOptions = buttonOptions;
+
+        StartCoroutine(AnimateButtons());
+
     }
 
     IEnumerator AnimateButtons ()
     {
-        for (var i = 0; i < ButtonOptions.Length; i++)
+        for (var i = 0; i < _buttonOptions.Length; i++)
         {
             var newButton = Instantiate(MenuButtonPrefab) as MenuButton;
             newButton.transform.SetParent(_menuContentWrapper); // Place the buttons in the MenuContentWrapper
 
-            var theta = (2 * Mathf.PI / ButtonOptions.Length) * i;
+            var theta = (2 * Mathf.PI / _buttonOptions.Length) * i;
             var xPos = Mathf.Sin(theta);
             var yPos = Mathf.Cos(theta);
             newButton.transform.localPosition = new Vector3(xPos, yPos, 0f) * distance;
 
-            newButton.Circle.color = ButtonOptions[i].Color;
-            newButton.Icon.sprite = ButtonOptions[i].Sprite;
-            newButton.Title = ButtonOptions[i].Title;
+            newButton.Circle.color = _buttonOptions[i].Color;
+            newButton.Icon.sprite = _buttonOptions[i].Sprite;
+            newButton.Title = _buttonOptions[i].Title;
             newButton.ButtonAction = ToggleSelected;
+            newButton.AcionOnSelected = _buttonOptions[i].ButtonAction;
 
             yield return new WaitForSeconds(0.06f);
         }
@@ -83,7 +81,7 @@ public class Menu : MonoBehaviour {
 
             if (SelectedButton)
             {
-                Debug.Log(SelectedButton.Title + " was selected");
+                SelectedButton.AcionOnSelected.Invoke();
             }
 
         }
